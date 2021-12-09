@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600&family=IBM+Plex+Sans:ital,wght@1,400;1,700&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body {
+	height: 100%;
+}
+body {
+	background-color: #101047;
+	color: #fff;
+	font-family: 'Baloo Bhaijaan 2', cursive;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+// =============== Home page 
+.home {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	height: auto;
+	padding: 20px;
+	background-color: #06061C;
+	border-radius: 30px;
+	.title {
+		text-align: center;
+		font-size: 50px;
+	}
+	.settings {
+		background-color: #101047;
+		display: flex;
+		padding: 5px;
+		border-radius: 20px;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.setting {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			margin: 10px;
+			label {
+				font-size: 20px;
+				text-decoration: underline;
+			}
+			select {
+				outline: none;
+				background-color: #06061C;
+				border: 1px solid #06061C;
+				color: #fff;
+				border-radius: 5px;
+				padding: 5px;
+			}
+		}
+	}
+	.start-btn {
+		width: 300px;
+		height: 40px;
+		background-color: #101047;
+		border-radius: 20px;
+		cursor: pointer;
+		color: #fff;
+		font-size: 20px;
+		border: 1px solid #fff;
+		letter-spacing: 3px;
+		align-self: center;
+		margin-top: 20px;
+		transition: 0.4s;
+		text-transform: uppercase;
+		&:hover {
+			background-color: #fff;
+			color: #101047;
+		}
+	}
+}
+
+// ============ Board style
+.game {
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	width: 800px;
+	height: 100%;
+	// background-color: red;
+}
+.board {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 600px;
+	height: 600px;
+	background-color: rgb(238, 238, 238);
+	border: 3px solid #06061C;
+	.card {
+		cursor: pointer;
+		position: relative;
+		border: 1px solid #101047;
+		transition: 0.5s;
+		transform-style: preserve-3d;
+		backface-visibility: hidden;
+		& > div {
+			inset: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.front {
+			backface-visibility: hidden;
+			// background: url(../images/back.jpg) 0% 0% / cover;
+			transform: rotateY(0deg);
+		}
+		.back {
+			background: rgb(235, 235, 235);
+			overflow: hidden;
+			transform: rotateY(-180deg);
+			border: 1px solid #101047;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #000;
+			font-size: 70px;
+		}
+	}
+}
+.game-info {
+	width: 130px;
+	height: 600px;
+	.line-el {
+		padding: 10px;
+		background-color: #06061C;
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+		.text {
+			font-weight: bold;
+		}
+		span {
+			margin-left: 10px;
+		}
+		.back {
+			color: #fff;
+			text-decoration: none;
+			background-color: #000;
+			border-radius: 5px;
+			padding: 5px 10px;
+			cursor: pointer;
+			transition: 0.4s;
+			&:hover {
+				color: #000;
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.message {
+	display: none;
+	position: absolute;
+	// width: 200px;
+	padding: 20px 30px;
+	border-radius: 35px;
+	height: auto;
+	background-color: #06061C;
+	border: 20px solid #101047;
+	font-size: 35px;
+	top: 50%;
+	left: 50%;
+	transition: 0.5s;
+	transform: translateX(-50%) translateY(-50%) scale(0);
+	::after {
+		content: '';
+		position: absolute;
+		height: calc(100% + 40px);
+		width: calc(100% + 40px);
+		// background-color: red;
+		left: -35px;
+		top: -35px;
+		border-radius: 55px;
+		border: 15px solid #fff;
+	}
+}

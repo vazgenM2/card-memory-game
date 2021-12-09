@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Card Memory</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="home">
+		<h1 class="title">Card memory game</h1>
+		<div class="settings">
+			<div class="setting">
+				<label for="size">Game size</label>
+				<select name="size" id="size">
+					<option value="4">4x4</option>
+					<option value="6">6x6</option>
+					<option value="8">8x8</option>
+				</select>
+			</div>
+
+			<div class="setting">
+				<label for="timer">Timer</label>
+				<select name="size" id="timer">
+					<option value="none">none</option>
+					<option value="1">1 min</option>
+					<option value="2">2 min</option>
+					<option value="3">3 min</option>
+					<option value="5">5 min</option>
+				</select>
+			</div>
+
+			<div class="setting">
+				<label for="type">Type</label>
+				<select name="size" id="type">
+					<option value="number">Numbers</option>
+					<option value="color">Colors</option>
+					<option value="color-text">Colors (text)</option>
+					<option value="letter">Letters</option>
+					<option value="symbol">Symbols</option>
+					<option value="emoji">Emotions</option>
+				</select>
+			</div>
+		</div>
+
+		<button class="start-btn">Start</button>
+	</div>
+
+	<div class="game">
+		<div class="game-info">
+			<div class="line-el">
+				<a class="back">Back</a>
+			</div>
+			<div class="line-el">
+				<p class="text">Tries:</p>
+				<span class="tries">0</span>
+			</div>
+			<div class="line-el">
+				<p class="text">Matches:</p>
+				<span class="points">0</span>
+			</div>
+			<div class="line-el">
+				<p class="text">Time:</p>
+				<span class="timer">-</span>
+			</div>
+		</div>
+
+		<div class="board"></div>
+	</div>
+
+	<div class="message">
+		<h1 class="win">You Win !</h1>
+		<h1 class="lose">You Lose :(</h1>
+	</div>
+
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+
+</html>
