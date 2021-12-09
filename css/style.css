@@ -163,6 +163,7 @@ body {
 .board .card .front {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  background: url(../images/back.jpg) 0% 0%/cover;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }

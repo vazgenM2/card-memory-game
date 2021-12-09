@@ -45,9 +45,6 @@ document.querySelector('.start-btn').addEventListener('click', async () => {
 		cardStyle.fontSize = 30
 	}
 
-	if (cardsType == 'color-text') {
-		cardStyle.fontSize = '30'
-	}
 
 	// =============== Timer
 	if (timer !== 'none') {
