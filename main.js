@@ -75,6 +75,9 @@ document.querySelector('.start-btn').addEventListener('click', async () => {
 		back.classList.add('back')
 		back.style.fontSize = cardStyle.fontSize + 'px'
 
+		if (document.querySelector('.animation').checked) {
+			card.classList.add('animation')
+		}
 		if (cardsType === 'color') {
 			back.innerHTML = ''
 			back.style.background = cardsData[i]
@@ -83,9 +86,11 @@ document.querySelector('.start-btn').addEventListener('click', async () => {
 		}
 
 		card.setAttribute('value', cardsData[i])
+		setTimeout(() => {
+			card.appendChild(back)
+		}, 50)
 		card.setAttribute('click', '1')
 		card.appendChild(front)
-		card.appendChild(back)
 		card.classList.add("card")
 		card.style.width = cardStyle.size + 'px'
 		card.style.height = cardStyle.size + 'px'

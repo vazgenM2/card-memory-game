@@ -145,8 +145,6 @@ body {
   cursor: pointer;
   position: relative;
   border: 1px solid #101047;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -185,6 +183,11 @@ body {
           align-items: center;
   color: #000;
   font-size: 70px;
+}
+
+.board .card.animation {
+  -webkit-transition: 0.35s;
+  transition: 0.35s;
 }
 
 .game-info {
